@@ -1,2 +1,2 @@
 # masch-projects
-👋 My personally Webpage 🕸️
+👋 sMy personally Webpage 🕸️
