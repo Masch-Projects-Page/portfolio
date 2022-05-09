@@ -1,0 +1,398 @@
+/* ------------------------------------------------------------- */
+/* [CSS-File] - responsive-desktop.css 
+/* ------------------------------------------------------------- */
+/* [Definitions]
+/* 
+/* 1. width >= 1280px 
+/* 2. width <= 1280px and >=1680px 
+/* 3. width >= 1880px
+/* 4. width >= 2180px ( goes to 27 inch )
+/* 5. width >= 3180px ( goes to 32 inch / 4k )
+
+/* ------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------- */
+/* 1. width >= 1280px
+/* -------------------------------------------- */
+
+
+@media (min-width: 1280px ) {
+
+
+    /* ----------------------------- */
+    /* Change Header Layout
+    /* ----------------------------- */
+
+    #header-portfolio-container {
+
+        grid: auto auto / 1fr auto; 
+    }
+
+    #header-portfolio-top-area { 
+
+        height: calc(.1vw + 5em);
+
+        padding-left: calc(.1vw + 1em);
+        padding-right: calc(.1vw + 1.3em);
+
+    }
+
+
+    /* ----------------------------------------- */
+    /* Logo & Small Img 
+    /* ----------------------------------------- */
+
+    #header-portfolio-img-area > img:nth-of-type(1) {
+
+        width: calc(.1vw + 2.5em );
+    }
+
+    #header-portfolio-img-area > img:nth-of-type(2) {
+
+        width: calc(.1vw + 1.1em);
+        top: calc(.1vw + 1.8em);
+        right: calc(.1vw - .7em);
+
+    }
+
+    /* ----------------------------------------- */
+    /* Title & Sub Title 
+    /* ----------------------------------------- */
+
+    #header-portfolio-nav > a > div { color:var(--white);}
+
+    #header-portfolio-title-area { 
+
+        display: block;
+        line-height: calc(.1vw + 1.3em);
+        margin-left: calc(.1vw + .3em);
+        margin-right: calc(.1vw + .3em);
+    
+    }
+
+
+    #header-portfolio-title { 
+        
+        font-size: calc(.1vw + 1.2em);
+        color: var(--white);
+    }
+
+    #header-portfolio-title-area > div:nth-of-type(2) { 
+        
+        font-size: calc(.1vw + .9em);
+    }
+
+    #header-portfolio-underline-area-2 { display: none;}
+
+
+    /* ----------------------------------------- */
+    /* Show JS Matrix
+    /* ----------------------------------------- */
+    #header-portfolio-js-matrix { display: flex; }
+
+
+
+    /* -------------------------------------------- */
+    /* Header Line 
+    /* -------------------------------------------- */
+    #header-portfolio-underline-area-1 {
+
+        /* change pos in grid */
+        order: 1;
+        grid-column: 1 / span 2;
+
+        height: calc(.1vw + .2em);
+
+        box-shadow: 
+        rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; 
+
+    }
+
+
+    /* -------------------------------------------- */
+    /* Header Anker Nav 
+    /* -------------------------------------------- */
+
+    #header-portfolio-nav { 
+        
+        height: 100%; 
+        font-size: calc(.1vw + 1.1em);
+        padding-right: calc(.1vw + 1em);
+
+        display: inline-flex;
+        column-gap: calc(.1vw + .3em);
+
+    
+    }
+
+    #header-portfolio-nav > a { 
+        
+        height: 60%; 
+        padding-left: calc(.1vw + .6em);
+        padding-right: calc(.1vw + .8em);
+    
+    } 
+    
+
+    /* unshown right arrow */
+    .mobile-arrow-right { display: none; }
+
+
+
+
+    /* ----------------------------- */
+    /* Main Section
+    /* ----------------------------- */
+
+    #main-portfolio-container #section-top-about-me {
+
+        padding-top: calc(.6vw + 7.8em);
+
+    }
+
+
+    /* change bg color mix to img */
+    
+    #bg-img-aboutme,
+    #bg-img-finished-projects, 
+    #bg-img-todos,
+    #bg-img-more { display: block; }
+
+    /* unshown colorm mix */
+    #bg-aboutme,
+    #bg-finished-projects , 
+    #bg-todos ,
+    #bg-more  { display: none; }
+     
+
+
+    /* ---------------------------------- */
+    /* Footer                             */
+    /* ---------------------------------- */
+
+
+    #footer-portfolio > section { 
+
+        padding-left: 4.3vw;
+        padding-right: 4.3vw;
+    }
+
+    #img-footer-compass {
+
+        width: calc(.1vw + 3.8em);
+        top: calc(.1vw + 1.1em);
+        right:calc(.1vw + 1.8em);
+        
+    }
+
+
+   
+
+}
+
+
+
+
+/* -------------------------------------------- */
+/* 2. width <= 1280px and >=1680px 
+/* -------------------------------------------- */
+
+
+@media (min-width: 1280px ) and (max-width: 1680px ) {
+
+
+    /* ----------------------------- */
+    /* Main Section
+    /* ----------------------------- */
+
+    #main-portfolio-container > div:nth-of-type(1) > section,
+    #main-portfolio-container > div:nth-of-type(3) > section { 
+
+        padding-left: 4vw;
+        margin-right: calc(25vw + 1em);
+    
+    }
+
+    #main-portfolio-container > div:nth-of-type(2) > section,
+    #main-portfolio-container > div:nth-of-type(4) > section { 
+
+        padding-left: calc(25vw + 1em);
+        margin-right: 4vw;
+    
+    }
+
+
+
+
+}
+
+
+
+/* -------------------------------------------- */
+/* 3. width >= 1681px 
+/* -------------------------------------------- */
+
+@media (min-width: 1681px ) {
+
+
+    /* ----------------------------- */
+    /* Main Section
+    /* ----------------------------- */
+
+    #main-portfolio-container > div:nth-of-type(1) > section,
+    #main-portfolio-container > div:nth-of-type(3) > section { 
+
+        padding-left: 4vw;
+        margin-right: calc(37vw + 1em);
+    
+    }
+
+    #main-portfolio-container > div:nth-of-type(2) > section,
+    #main-portfolio-container > div:nth-of-type(4) > section { 
+
+        padding-left: calc(37vw + 1em);
+        margin-right: 4vw;
+    
+    }
+
+
+
+}
+
+
+
+
+
+/* -------------------------------------------- */
+/* 3. width >= 1880px
+/* -------------------------------------------- */
+
+@media (min-width: 1880px ) {
+
+
+    /* ------------------------------------------- */
+    /* Header 
+    /* ------------------------------------------- */
+
+    #header-portfolio-top-area { padding-left: calc(.1vw + 1.3em );  }
+
+    
+    /* Logo & Small Img  */
+
+    #header-portfolio-img-area > img:nth-of-type(1) {
+
+        width: calc(.1vw + 2.8em );
+    }
+
+    #header-portfolio-img-area > img:nth-of-type(2) {
+
+        width: calc(.1vw + 1.3em);
+        top: calc(.1vw + 1.8em);
+        right: calc(.1vw - 1em);
+
+    }
+
+    /* title & sub area */
+
+    #header-portfolio-title-area { 
+
+        line-height: calc(.1vw + 1.4em);
+        margin-left: calc(.1vw + .5em);
+        margin-right: calc(.1vw + .5em);
+        
+    
+    }
+
+    #header-portfolio-title { font-size: calc(.1vw + 1.3em);    }
+        
+
+    #header-portfolio-title-area > div:nth-of-type(2) { 
+        
+        font-size: calc(.1vw + 1em);
+    }
+
+
+}
+
+
+
+
+/* -------------------------------------------- */
+/* 4. width >= 2180px ( goes to 27 inch )
+/* -------------------------------------------- */
+
+@media (min-width: 2180px ) and ( max-width: 3179px ) {
+
+    
+    
+    body {
+
+        font-size: calc( .3vw + 1.3rem);
+
+    }
+
+
+    /* ----------------------------- */
+    /* Main Section
+    /* ----------------------------- */
+
+    #main-portfolio-container > div:nth-of-type(1) > section,
+    #main-portfolio-container > div:nth-of-type(3) > section { 
+
+        padding-left: 4vw;
+        margin-right: calc(35vw + 1em);
+    
+    }
+
+    #main-portfolio-container > div:nth-of-type(2) > section,
+    #main-portfolio-container > div:nth-of-type(4) > section { 
+
+        padding-left: calc(35vw + 1em);
+        margin-right: 4vw;
+    
+    }
+
+
+}
+
+
+
+/* -------------------------------------------- */
+/* 5. width >= 3180px ( goes to 32 inch / 4k )
+/* -------------------------------------------- */
+
+@media (min-width: 3180px ) {
+
+
+    body {
+
+        font-size: calc( .3vw + 2rem);
+
+    }
+
+    /* ----------------------------- */
+    /* Main Section
+    /* ----------------------------- */
+
+    #main-portfolio-container > div:nth-of-type(1) > section,
+    #main-portfolio-container > div:nth-of-type(3) > section { 
+
+        padding-left: 4vw;
+        margin-right: calc(32vw + 1em);
+    
+    }
+
+    #main-portfolio-container > div:nth-of-type(2) > section,
+    #main-portfolio-container > div:nth-of-type(4) > section { 
+
+        padding-left: calc(32vw + 1em);
+        margin-right: 4vw;
+    
+    }
+
+   
+
+}

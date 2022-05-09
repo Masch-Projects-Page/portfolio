@@ -1,0 +1,46 @@
+/* ------------------------------------------------------------- */
+/* [CSS-File] - root-text-styling.css 
+/* ------------------------------------------------------------- */
+/* [Definitions]
+/* 
+/*  1. font styling
+/*  2. line-heights  
+ 
+
+/* ------------------------------------------------------------- */
+
+
+/* --------------------------------------- */
+/* 1 - font styling                         */
+/* --------------------------------------- */
+
+.txt-b { font-weight: bold; }
+.txt-i { font-style: italic; }
+
+.txt-u { text-decoration: underline; }
+
+.txt-centered { text-align: center; }
+.txt-block { text-align: justify; }
+
+
+
+/* --------------------------------------- */
+/* 2 - line-heights                         */
+/* --------------------------------------- */
+
+.line-h-0-6 { line-height: calc(.1vw + .6em );}
+.line-h-0-8 { line-height: calc(.1vw + .8em );}
+.line-h-0-9 { line-height: calc(.1vw + .9em );}
+.line-h-1 { line-height: calc(.1vw + 1em );}
+
+.line-h-1-2 { line-height: calc(.1vw + 1.2em );}
+.line-h-1-3 { line-height: calc(.1vw + 1.3em );}
+.line-h-1-5 { line-height: calc(.1vw + 1.5em );}
+
+.line-h-1-8 { line-height: calc(.1vw + 1.8em );}
+.line-h-2 { line-height: calc(.1vw + 2em );}
+
+
+
+
+

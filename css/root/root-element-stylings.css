@@ -1,0 +1,457 @@
+/* ------------------------------------------------------------- */
+/* [CSS-File] - root-element-stylings.css
+/* ------------------------------------------------------------- */
+/* [Definitions]
+/* 
+
+    1. Main - Content Container Style 
+        1.1 Main Sub - Content Container Style 
+        1.2 Main Sub - ol/ul List Element
+
+    2. Main - Label & Hover Style
+        2.1 - Label ( open / close )
+
+    3. Main - Formular Elements & Effects
+        3.1 - similarities
+        3.2 - Textfields 
+        3.3 - Textarea 
+        3.4 - Buttons 
+      
+
+    4. Block Element Layouts 
+        4.1 - cuved elements ( same size )
+        4.2 - cuved elements ( different size )
+        4.3 - Main Sub Box Layout
+            4.3.1 - Main Sub Title Box 
+            4.3.2 - Main Sub Quote Box 
+
+
+    5. width , height sets 
+        5.1 - % - values 
+        5.2 - vw/vh - values 
+        5.3 - em - values 
+
+    6. opacity style
+         
+
+/* ------------------------------------------------------------- */
+
+
+
+
+
+/* ------------------------------------------------------------------------- */
+/* 1 - Main - Content Container Style 
+/* ------------------------------------------------------------------------- */
+
+.main-portfolio-content-box {
+
+    padding-left: 0em;
+    padding-right: 0em;
+    
+}
+
+/* box if black card layout had no padding */
+/* special padding for list elements */
+.main-portflio-content-list-box {
+
+    padding-top: calc(.1vw + 3em);
+    padding-bottom: calc(.1vw + 3em);
+
+    padding-left: calc(.1vw + 1em);
+    padding-right: calc(.1vw + 1em);
+
+}
+
+
+/* ------------------------------------------------------------- */
+/* 1.1 -  Main Sub - Content Container Style 
+/* ------------------------------------------------------------- */
+
+.main-portfolio-sub-content-box {
+
+    padding-top: calc(.1vw + 2em );
+
+    padding-left: calc(.1vw + .6em);
+    padding-right: calc(.1vw + .8em);
+
+}
+
+/* ---------------------------------------------------------------- */
+/* 1.2 - Main Sub - ol/ul List Element
+/* ---------------------------------------------------------------- */
+
+.main-portfolio-ol-ul-box {
+
+   
+    display: grid;
+    row-gap: calc(.1vw + .5em);
+
+    padding-left: calc(.1vw + 1.5em);
+
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------- */
+/* 2. Main - Label & Hover Style
+/* ------------------------------------------------------------------- */
+
+
+/* ------------------------------------------------ */
+/* 2.1 - Label ( open / close )
+/* ------------------------------------------------ */
+
+
+.label-open-close-style {
+
+    height: calc(.1vw + 2.5em);
+    padding-left: calc(.1vw + .5em);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    background-color: var(--rainy-dark);
+    color: var(--skin-brown);
+
+    cursor: pointer;
+}
+
+.label-open-close-style:hover,
+.label-finished-projects:hover {
+
+    transition: .3s;
+    opacity: .8;
+    box-shadow: 0em 0em .1em .1em var(--skin-brown) inset;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------- */
+/* 3. Main - Formular Elements & Effects
+/* ------------------------------------------------------------------------- */
+
+
+/* ----------------------------------- */
+/*  3.1 - similarities
+/* ----------------------------------- */
+
+
+.txt-field:focus , 
+.txt-area:focus {
+
+    border: 3px solid #555;
+    opacity: 1;
+}
+
+
+/* ----------------------------------- */
+/*  3.2 - Textfields
+/* ----------------------------------- */
+
+.txt-field {
+
+    /* delete default browser settings */
+    outline: none;
+
+    font-size: calc(.1vw + .8em);
+    font-weight: bold;
+
+    padding: calc(.1vw + 1em);
+    border-radius: .5em;
+
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+
+    opacity: .6;
+}
+
+
+/* ----------------------------------- */
+/*  3.3 - Textarea
+/* ----------------------------------- */
+
+.txt-area {
+
+    padding: calc(.1vw + 1em);
+    font-size: calc(.1vw + .8em);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+
+    border-radius: .5em;
+
+    outline: none;
+
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+
+    opacity: .6;
+
+}
+
+
+.txt-area-no-resize { resize: none; }
+
+
+/* ----------------------------------- */
+/*  3.4 - Buttons
+/* ----------------------------------- */
+
+
+.btn-default {
+
+    outline: none;
+    display: inline-flex;
+
+    background-color: var(--skin-brown);
+
+    cursor: pointer;
+
+    padding: calc(.1vw + .8em);
+    
+    font-size: calc(.1vw + .8em);
+    font-weight: bold;
+
+    border-radius: .5em;   
+}
+
+.btn-default:hover {
+
+    transition: ".3s";
+    background-color: var(--light-grey);
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------- */
+/* 4. Block Element Layouts 
+/* ------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------- */
+/*  4.1 - cuved elements ( same size )
+/* --------------------------------------------------------*/
+
+
+
+    /* ----------------------------------- */ 
+    /* Curved - 0.2em 
+    /* ----------------------------------- */ 
+
+    /* ------------------------------ */
+    /* 4. Edge  
+    /* ------------------------------ */
+
+    .b-curved-0-2 { border-radius: .2em; }
+
+
+
+
+
+    /* ----------------------------------- */ 
+    /* Curved - 0.3em 
+    /* ----------------------------------- */ 
+
+
+    /* ------------------------------ */
+    /* 3. Edge  
+    /* ------------------------------ */
+
+    .b-t-l-b-lr-curved-0-3 { border-radius: .3em 0em .3em .3em; }
+
+    /* ------------------------------ */
+    /* 4. Edge  
+    /* ------------------------------ */
+
+    .b-curved-0-3 { border-radius: .3em;  } 
+
+
+
+
+
+
+
+
+
+    /* --------------------------------------- */ 
+    /* Curved - 0.5em 
+    /* --------------------------------------- */ 
+
+
+    /* ------------------------------ */
+    /* 1. Edge  
+    /* ------------------------------ */
+
+    .b-t-r-curved-0-5 { border-radius: 0em .5em 0em 0em; }
+
+    .b-t-l-curved-0-5 { border-radius: .5em 0em 0em 0em; }
+
+    /* ------------------------------ */
+    /* 2. Edge  
+    /* ------------------------------ */
+
+    .b-t-lr-curved-0-5 {  border-radius: .5em .5em 0em 0em; }
+
+    .b-t-r-b-r-curved-0-5 { border-radius: 0em .5em .5em 0em; }
+
+    .b-t-l-b-l-curved-0-5 { border-radius: .5em .0em .0em .5em; }
+
+
+    /* ------------------------------ */
+    /* 3. Edge  
+    /* ------------------------------ */
+
+    .b-t-r-b-lr-curved-0-5 { border-radius: 0em .5em .5em .5em; }
+
+    .b-t-l-b-lr-curved-0-5 { border-radius: .5em 0em .5em .5em; }
+
+    .b-t-lr-b-l-curved-0-5 { border-radius: .5em .5em 0em 0em; }
+
+
+
+    /* ------------------------------ */
+    /* 4. Edge  
+    /* ------------------------------ */
+
+    .b-curved-0-5 { border-radius: .5em;  } 
+
+
+
+
+
+   
+/* ------------------------------------------------------------- */
+/*  4.2 - cuved elements ( different size )
+/* ------------------------------------------------------------- */ 
+
+
+/* ------------------------------ */
+/* 2. Edge  
+/* ------------------------------ */
+
+.b-t-r-b-l-curved-0-5-6-3 { border-radius: 0em .5em 0em 6.3em; }
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------- */
+/*  4.3 - Main Sub Box Layout
+/* ------------------------------------------------------------------- */
+
+
+/* --------------------------------------------- */
+/*  4.3.1 - Main Sub Title Box 
+/* --------------------------------------------- */
+
+
+.main-sub-title-box {
+
+    display: inline-block;
+
+    padding: calc(.1vw + .3em );
+
+    padding-top: calc(.1vw + .3em);
+    padding-bottom: calc(.1vw + .3em);
+
+    padding-left: calc(.1vw + 1em);
+    padding-right: calc(.1vw + 1em);
+
+    background-color: var(--skin-brown);
+    color: var(--black);
+
+    font-weight: bold;
+}
+
+/* --------------------------------------------- */
+/*  4.3.2 - Main Sub Quote Box 
+/* --------------------------------------------- */
+
+
+/* actually not used, but could me in future */
+
+.main-sub-quote-box {
+
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: calc(.1vw + 1.5em );
+}
+
+
+
+
+/* ------------------------------------------------------- */
+/*  5 - width , height sets 
+/* --------------------------------------------------------*/
+
+
+/* --------------------------------------- */
+/* 5.1 - % - values 
+/* --------------------------------------- */
+
+.width-100p { width: 100%; }
+.width-90p { width: 90%; }
+.width-80p { width: 80%; }
+.width-50p { width: 50%; }
+.width-30p { width: 30%; }
+
+
+/* --------------------------------------- */
+/* 5.2 - vw/vh - values 
+/* --------------------------------------- */
+
+.width-80vw { width: 80vw; }
+.width-60vw { width: 60vw; }
+.width-50vw { width: 50vw; }
+.width-30vw { width: 30vw; }
+
+
+
+/* --------------------------------------- */
+/* 5.3 - em - values 
+/* --------------------------------------- */
+
+
+.width-2em { width: calc(.1vw + 2em);}
+
+
+
+
+
+/* ------------------------------------------------------- */
+/*  6 - opacity style
+/* --------------------------------------------------------*/
+
+.op-0-2 { opacity: .2; }
+.op-0-3 { opacity: .3; }
+.op-0-5 { opacity: .5; }
+.op-0-6 { opacity: .6; }
+.op-0-8 { opacity: .8; }
+.op-0-9 { opacity: .9; }

@@ -1,0 +1,595 @@
+/* ------------------------------------------------------------- */
+/* [CSS-File] - main-moore.css 
+/* ------------------------------------------------------------- */
+/* [Definitions]
+/* 
+   1 - Default More Header Container
+        1.1 More Header 
+        1.2 More Header Anker Nav's ( 4er , 5er )
+        1.3 More Header Keyframe Animation 
+
+   2. My Tech Docu ( layouts container )
+   
+   3. Motivation ( layouts container )
+       
+
+/* ------------------------------------------------------------- */
+
+
+
+
+/* --------------------------------------------------------------- */
+/* 1 - Default More Header Container
+/* --------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------ */
+/* 1.1 - More Header Layout
+/* ------------------------------------------------------ */
+
+
+.more-title-header-block {
+
+    height: 100%;
+
+    display: grid;
+    grid: auto / 1fr;
+    /* desktop:  grid: auto / calc(3vw + 10em) 3fr; */
+
+    
+
+    background-color: var(--rainy-dark);
+    border-radius: .5em .5em 0em 0em;
+
+    border-bottom: calc(.1vw + .2em) solid var(--skin-brown);
+
+}
+
+/* ------------------------------- */
+/* Title Block Img
+/* ------------------------------- */
+
+.img-more-title {
+
+    display: none;
+    /* desktop show */
+
+    width: calc(3vw + 10em);
+    height: 100%;
+}
+
+/* -------------------------------------- */
+/* Title Header Block & Germany Flag 
+/* -------------------------------------- */
+
+.more-title-text-block {
+
+    display: grid;
+    row-gap: calc(.1vw + .5em);
+
+    padding-top: calc(.1vw + .8em);
+    padding-bottom: calc(.1vw + .8em);
+    padding-left: calc(.1vw + 1em);
+    padding-right: calc(.1vw + 1.3em);
+    
+}
+
+.more-title-flag-block {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-weight: bold;
+    
+}
+
+
+/* -------------------------------------- */
+/* Title Txt & Sub Title Txt
+/* -------------------------------------- */
+
+.more-h1 { 
+
+    font-size: calc(.1vw + 1.2em);
+}
+
+.more-sub-header-infos {
+
+    font-size: calc(.1vw + .9em);
+    line-height: calc(.1vw + 1.5em);
+
+    padding-left: calc(.1vw + .8em);
+}
+
+
+
+
+
+/* ------------------------------------------------------ */
+/* 1.2 More Header Anker Nav's ( 4er , 5er )
+/* ------------------------------------------------------ */
+
+
+
+/* ------------------------------------ */
+/* Mobile Short Txt Element unshown 
+/* ------------------------------------ */
+
+#more-unshown-txt-mindset , 
+#more-unshown-txt-ology ,
+#more-unshown-txt-videos,
+#more-unshown-txt-to ,
+.more-unshown-txt-end { display: none;}
+
+
+
+.more-label-nav-docu ,
+.more-label-nav-motivation {
+
+    height: calc(.1vw + 2.5em);
+
+    display: grid;
+    column-gap: .1em;
+    align-items: center;
+ 
+    background-color: var(--dark-grey);
+
+}
+
+
+
+
+
+
+
+/* 4er column nav */
+.more-label-nav-docu { grid: calc(.1vw + 2.5em) / calc(.1vw + 2.5em) 1fr 1fr 1fr; }
+    
+/* 5er column nav */
+.more-label-nav-motivation { grid: calc(.1vw + 2.5em) / calc(.1vw + 2.5em) 1fr 1fr 1fr 1fr; }
+
+/* title nav label style */
+.more-label-nav-docu > label,
+.more-label-nav-motivation > label {
+
+    cursor: pointer;
+    background-color: var(--rainy-dark);
+    font-weight: bold;
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+ 
+}
+
+/* title nav label hover */
+.more-label-nav-docu > label:hover ,
+.more-label-nav-motivation > label:hover {
+
+    transition: .3s;
+    background-color: var(--skin-brown);
+    color: var(--black);
+}
+
+
+
+/* ------------------------------------ */
+/*  Position of Anker Nav Lables
+/* ------------------------------------ */
+
+label[for^="radio-more-doc"] { column-gap: .5em; }
+/* because of mobile small width size */
+label[for^="radio-more-motivation"] { column-gap: .1em; }
+
+
+
+
+
+/* ----------------------------------------------------------- */ 
+/* 3er Label Anker Nav Handling + X - Label ( open / close )
+/* ----------------------------------------------------------- */ 
+
+input[id^="radio-more-doc"] , 
+input[id^="chk-more-open-closed"] { display: none; }
+
+
+/* if radio checked , set label style */
+input#radio-more-doc-frontend:checked ~ div label[for="radio-more-doc-frontend"] ,
+input#radio-more-doc-backend:checked ~ div label[for="radio-more-doc-backend"] , 
+input#radio-more-doc-weiteres:checked ~ div label[for="radio-more-doc-weiteres"]  {
+
+    background-color: var(--skin-brown);
+    color: var(--black);
+}
+
+input#radio-more-doc-frontend:checked ~ #more-frontend ,
+input#radio-more-doc-backend:checked ~ #more-backend ,
+input#radio-more-doc-weiteres:checked ~ #more-weiteres {
+
+    display: grid;
+}
+
+/* unshown keyframe animation if one is checked */
+input#radio-more-doc-frontend:checked ~ div > div.more-arrow-up-keyframe-panel-docu ,
+input#radio-more-doc-backend:checked ~ div > div.more-arrow-up-keyframe-panel-docu ,
+input#radio-more-doc-weiteres:checked ~ div > div.more-arrow-up-keyframe-panel-docu {
+
+    display: none;
+}
+
+
+
+
+/* ----------------------------------------------------------- */ 
+/*  4er Label Anker Nav Handling + X - Label ( open / close )
+/* ----------------------------------------------------------- */ 
+
+
+input[id^="radio-more-motivation"] { display: none; }
+
+
+/* if radio checked */
+input#radio-more-motivation-to-start:checked ~ div label[for="radio-more-motivation-to-start"] ,
+input#radio-more-motivation-life-mindset:checked ~ div label[for="radio-more-motivation-life-mindset"] , 
+input#radio-more-motivation-personality:checked ~ div label[for="radio-more-motivation-personality"] , 
+input#radio-more-motivation-lyric-videos:checked ~ div label[for="radio-more-motivation-lyric-videos"] {
+
+    background-color: var(--skin-brown);
+    color: var(--black);
+}
+
+input#radio-more-motivation-to-start:checked ~ #more-to-start ,
+input#radio-more-motivation-life-mindset:checked ~ #more-life-mindset ,
+input#radio-more-motivation-personality:checked ~ #more-personality , 
+input#radio-more-motivation-lyric-videos:checked ~ #more-lyric-videos {
+
+    display: grid;
+}
+
+/* unshown keyframe animation if one is checked */
+input#radio-more-motivation-to-start:checked ~ div > div.more-arrow-up-keyframe-panel-motivation ,
+input#radio-more-motivation-life-mindset:checked ~ div > div.more-arrow-up-keyframe-panel-motivation ,
+input#radio-more-motivation-personality:checked ~ div > div.more-arrow-up-keyframe-panel-motivation , 
+input#radio-more-motivation-lyric-videos:checked ~ div > div.more-arrow-up-keyframe-panel-motivation {
+
+    display: none;
+}
+
+
+
+
+
+
+/* -------------------------------------------------------- */
+/* 1.3 - More Header Keyframe Animation 
+/* -------------------------------------------------------- */
+
+
+.more-arrow-up-keyframe-panel-docu,
+.more-arrow-up-keyframe-panel-motivation {
+
+   
+    /* because of x column */
+    padding-left: calc(.1vw + 2.5em);
+    height: calc(.1vw + 3.5em);
+
+    display: grid;
+    
+    column-gap: .1em;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.more-arrow-up-keyframe-panel-docu { grid: auto / 1fr 1fr 1fr; }
+
+.more-arrow-up-keyframe-panel-motivation { grid: auto / 1fr 1fr 1fr 1fr; }
+
+
+.more-arrow-up-keyframe-panel-docu img,
+.more-arrow-up-keyframe-panel-motivation img {
+
+    transform: rotate(180deg);
+    animation: padding-b-t .6s infinite;
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------- */
+/* 2. My Tech Docu ( layouts container )
+/* --------------------------------------------------------------- */
+
+#more-frontend,
+#more-backend,
+#more-weiteres {
+
+    display: none;
+
+    margin-top: calc(.1vw + 2.3em);
+    margin-bottom: calc(.1vw + 2.3em);
+
+    margin-left: calc(.1vw + 1.5em);
+    margin-right: calc(.1vw + 1.5em);
+
+    /*display: grid; */
+    row-gap: calc(.1vw + 3.3em);
+}
+
+
+
+
+/* ----------------------------------------- */
+/* More Docu Link Box
+/* ----------------------------------------- */
+
+.more-docu-link-box {
+
+    display: grid;
+    align-items: center;
+    align-items: flex-start;
+
+    grid: auto / 1fr;
+ 
+    row-gap: calc(.1vw + 1.3em);
+    column-gap: calc(.1vw + 1.3em);
+       
+}
+
+
+/* skin brown link info box */
+.doc-title-box {
+
+    display: inline-block;
+
+    padding-top: calc(.1vw + .3em);
+    padding-bottom: calc(.1vw + .3em);
+
+    padding-left: calc(.1vw + .6em);
+    padding-right: calc(.1vw + .6em);
+
+    border-radius: .3em;
+
+    background-color: var(--skin-brown);
+    color:var(--black);
+    font-weight: bold;
+}
+
+
+/* -------------------------- */
+/* link list box              */
+/* -------------------------- */
+.more-link-box {
+
+    display: grid;
+    row-gap: calc(.1vw + .1em);
+}
+
+.more-link-box a {
+
+    text-decoration: none;
+    padding: calc(.1vw + .1em);
+    color:var(--light-grey);
+}
+
+.more-link-box a:hover {
+
+    transition: .3s;
+    background-color: var(--rainy-dark);
+    
+}
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------- */
+/* 3. Motivation ( layouts container )
+/* ----------------------------------------------------------------- */
+
+/* header item list */
+
+.more-header-items-layout {
+
+    display: flex;
+    align-items: center;
+    column-gap: calc(.1vw + 1em);
+
+    /* desktop flex aic cg-1 */
+
+}
+
+
+#more-to-start, 
+#more-life-mindset,
+#more-personality , 
+#more-lyric-videos {
+
+    display: none;
+    /*display: grid;*/
+    row-gap: calc(.1vw + 1em);
+
+
+    /* desktop margin-left: calc(.1vw + 2.3em);
+    margin-right: calc(.1vw + 2.3em); */
+
+}
+
+
+
+
+
+
+/* -------------------------------------------------- */
+/* More Video Block Layout 
+/* -------------------------------------------------- */
+
+/* --------------------------- */
+/* Title Video Block           */
+/* --------------------------- */
+.more-title-video-block {
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: calc(.1vw + 4.5em);
+    margin-bottom: calc(.1vw + 4.5em); 
+
+}
+
+
+
+.more-video-block-layout {
+
+    display: grid;
+    grid: auto / 1fr;
+
+    /* mobile margin left , right */
+    margin-right: calc(5vw + 1em);
+    margin-left: calc(5vw + 1em);
+
+    /* desktop 1fr 1fr , rg 1.8em */
+
+    align-items: center;
+    
+    column-gap: calc(.1vw + 2.3em);
+    row-gap: calc(.1vw + 2.8em);
+
+    margin-bottom: calc(.1vw + 3.5em);
+
+}
+
+
+
+
+/* --------------------------- */
+/* More Video Container */
+/* --------------------------- */
+
+.more-video-container {
+
+    display: grid;
+    row-gap: calc(.1vw + .5em);
+}
+
+
+.more-video ,
+.more-img {
+
+    width: 100%;
+   
+    border-radius: .5em;
+    box-shadow: rgba(209,192,165, 0.95) 0px 5px 15px;
+}
+
+.more-video {
+
+    height: calc(.1vw + 11em);
+}
+
+
+
+
+
+
+/* --------------------------------------------------- */
+/* Flag Panel 
+/* --------------------------------------------------- */
+
+#spanish-video-container ,
+#english-video-container , 
+#france-video-container , 
+#greece-video-container {
+
+    display: none;
+
+}
+
+
+input[id^="radio-more-flag"] { display: none; }
+
+
+/* --------------------------------- */
+/* Flag Lyric Panel 
+/* --------------------------------- */
+
+.flag-panel {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    width: 100%;
+
+    column-gap: calc(.1vw + 2em);
+
+    margin-bottom: calc(.1vw + 2.3em);
+    margin-top: calc(.1vw + 2.3em);
+
+    /*margin-left: 4.5vw;
+    margin-right: 14vw; */
+}
+
+
+
+.more-lyric-flag-container {
+
+    display: grid;
+    grid: auto / 1fr 1fr;
+   
+
+    column-gap: calc(.1vw + 1.3em);
+    row-gap: calc(.1vw + 1.3em);
+
+    align-items: center;
+    
+
+    padding-right: calc(.1vw + 3.3em);
+
+}
+
+
+
+
+/* --------------------------------------- */
+/* radio flag handling */
+/* --------------------------------------- */
+
+label[for^="radio-more-flag"] { cursor: pointer;}
+
+input#radio-more-flag-spanish:checked ~ div.flag-panel label[for="radio-more-flag-spanish"] > div img , 
+input#radio-more-flag-english:checked ~ div.flag-panel label[for="radio-more-flag-english"] > div img ,
+input#radio-more-flag-france:checked ~ div.flag-panel label[for="radio-more-flag-france"] > div img ,
+input#radio-more-flag-greece:checked ~ div.flag-panel label[for="radio-more-flag-greece"] > div img {
+
+    transition: .3;
+    opacity: 1;
+}
+
+
+input#radio-more-flag-spanish:checked ~ #spanish-video-container , 
+input#radio-more-flag-english:checked ~ #english-video-container  ,
+input#radio-more-flag-france:checked ~ #france-video-container ,
+input#radio-more-flag-greece:checked ~ #greece-video-container {
+
+    display: grid;
+}
+
+

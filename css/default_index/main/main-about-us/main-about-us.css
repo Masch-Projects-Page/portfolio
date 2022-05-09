@@ -1,0 +1,552 @@
+/* ------------------------------------------------------------- */
+/* [CSS-File] - main-about-us.css 
+/* ------------------------------------------------------------- */
+/* [Definitions]
+/* 
+/* 1. IMG Me - Portfolio ( Absolute )
+
+   2. Article Layout - Welcome to Masch Projects
+        2.1 - h1 (container) - Welcome to Masch Projects
+
+   3. Checkbox ( open,close ) , Label , Content Box 
+
+   4. Open / Close - Content 
+        4.1 - Article Layout - Why I call it Masch Projects 
+
+        4.2 - Article Layout - My Tech Skills  
+            4.2.1 - [Mobile] - Input & Label ( Frontend , Backend )
+            4.2.2 - [Mobile] - Frontend & Backend Boxes
+
+        4.3 - Article Layout - My Mindset
+
+        4.4 - Article Layout - Contact Me
+            4.4.1 - E-Mail Formular 
+
+/* ------------------------------------------------------------- */
+
+
+
+
+/* -------------------------------------------------------------- */
+/* 1. IMG Me - Portfolio ( Absolute )11.5vw + 7em
+/* -------------------------------------------------------------- */
+
+
+#img-about-me {
+
+    position: absolute;
+    top: 0;
+    right:0;
+
+    width: calc( 4vw + 7em);
+    
+    /* mobile good */
+    border-radius: 0em .5em 0em 28vw;
+
+}
+
+
+
+
+/* ------------------------------------------------------------------------------ */
+/* 2. Article Layout - Welcome to Masch Projects
+/* ------------------------------------------------------------------------------ */
+
+
+/* --------------------------------------------------------------- */
+/* 2.1 - h1 (container) - Welcome to Masch Projects
+/* --------------------------------------------------------------- */
+
+
+#h1-main-about-me-flex {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    /* h1 only width till img me portfolio  2.5vw + 4.3em*/
+    padding-right: calc( 1.5vw + 4.3em  );
+    padding-bottom: calc(.1vw + .5em);
+
+}
+
+
+/* mobile 2nd line left tab (better postion ) */
+#h1-main-about-me-flex > div:nth-of-type(2) {
+
+    padding-left: calc(.1vw + .3em);
+}
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------- */
+/* 3. Checkbox ( open,close ) , Label , Content Box 
+/* -------------------------------------------------------------- */
+
+
+/* checkboxes default unshown, but func. works */
+input[id^="chk-aboutme"] { display: none; }
+
+    
+label[for^="chk-aboutme"] {
+
+    font-size: calc(.1vw + 1.2em);
+}
+
+/* -------------------------------------- */ 
+/* Content Box ( unshown / show )
+/* -------------------------------------- */ 
+
+#div-why-masch,
+#div-my-tech-skills, 
+#div-my-mindset , 
+#div-contact-me  {
+
+    position: relative;
+    top:0;
+
+    display: none;   
+}
+
+
+/* ---------------------------------------- */
+/* Checkbox Checked 
+/* ---------------------------------------- */
+
+input#chk-aboutme-why-masch:checked ~ div > article #div-why-masch {
+
+    display: flex;
+    align-items: center;
+    column-gap: calc(.1vw + 1.3em);
+}
+
+input#chk-aboutme-my-tech-skills:checked ~ div > article #div-my-tech-skills, 
+input#chk-aboutme-my-mindset:checked ~ div > article #div-my-mindset { display: grid; }
+
+input#chk-aboutme-contact-me:checked ~ div > article #div-contact-me { display: block; }
+
+    
+
+/* ----------------------------------- */
+/* Label Img Handling
+/* ----------------------------------- */
+
+input#chk-aboutme-why-masch:checked ~ div > article > label[for="chk-aboutme-why-masch"] > div.open-close-box > img ,
+input#chk-aboutme-my-tech-skills:checked ~ div > article > label[for="chk-aboutme-my-tech-skills"] > div.open-close-box > img ,
+input#chk-aboutme-my-mindset:checked ~ div > article > label[for="chk-aboutme-my-mindset"] > div.open-close-box > img , 
+input#chk-aboutme-contact-me:checked ~ div > article > label[for^="chk-aboutme-contact-me"] > div.open-close-box > img {
+
+    transform: rotate(180deg);
+}
+
+
+/* ----------------------------------- */
+/* Label Img Box
+/* ----------------------------------- */
+ .open-close-box {
+
+    position: relative;
+    top:0;
+
+    background-color: var(--skin-brown);
+    width: calc(.1vw + 2.5em);
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------- */
+/*  4. Open / Close - Content 
+/* ----------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------- */
+/*  4.1 - Article Layout - Why I call it Masch Projects
+/* ---------------------------------------------------------------- */
+
+/* in mobile unshown img */
+#img-why-masch {
+
+    display: none;
+    width: calc(.1vw + 3.6em);
+ }
+
+
+
+
+
+
+/* ---------------------------------------------------------------- */
+/*   4.2 - Article Layout - My Tech Skills  
+/* ---------------------------------------------------------------- */
+ 
+
+#div-my-tech-skills {
+
+    grid: auto / 1fr; 
+
+    column-gap: calc(.1vw + 1em );
+    row-gap: calc(.1vw + 1.8em);
+
+}
+
+
+/* mobile size - img arrow show to frontend , backend */
+.img-arrow-right-checked {
+
+    width: calc(.1vw + 1.3em);
+
+}
+
+
+/* ---------------------------------------------------------- */ 
+/*  4.2.1 - [Mobile] - Input & Label ( Frontend , Backend )
+/* ---------------------------------------------------------- */ 
+
+input[name="about-me-frontend-backend"] { display: none; }
+
+label[for="radio-about-me-frontend"] ,
+label[for="radio-about-me-backend"] { cursor: pointer; }
+
+    
+/* label radio conainer , in desktop unshown */
+#radio-my-tech-skills-panel {
+
+    display: flex;
+    align-items: center;
+    column-gap: calc(.1vw + 1.3em);
+
+}
+
+/* circle radio layout for checking */
+.radio-circle {
+
+    position: relative;
+    top:0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--rainy-dark);
+    border-radius: 50%;
+
+    border: calc(.1vw + .1em) solid var(--skin-brown);
+
+    width: calc(.1vw + 1em);
+    height: calc(.1vw + 1em);
+}
+
+
+/* img x for checking radio */
+.radio-set-img {
+
+    width: calc(.1vw + 1.5em);
+    opacity: 0;
+}
+
+
+
+input#radio-about-me-frontend:checked ~ #div-my-tech-skills
+> #radio-my-tech-skills-panel > label[for="radio-about-me-frontend"] > div.radio-circle > img , 
+
+input#radio-about-me-backend:checked ~ #div-my-tech-skills >
+#radio-my-tech-skills-panel > label[for="radio-about-me-backend"] > div.radio-circle > img {
+
+    transition: all .3s;
+    opacity: 1;
+}
+
+
+
+
+
+/* ---------------------------------------------------------- */ 
+/*  4.2.2 - [Mobile] - Frontend & Backend Boxes
+/* ---------------------------------------------------------- */ 
+
+
+/* mobile first - default unshown */
+#my-tech-skills-frontend , 
+#my-tech-skills-backend {
+
+    display: none;
+    text-align: left;
+}
+
+/* title of tech skill box */
+
+.title-tech-skill-box {
+
+    display: inline-block;
+    color: var(--black);
+    background-color: var(--skin-brown);
+
+    padding: calc(.1vw + .5em);
+    font-weight: bold;
+
+}
+
+
+/* layout of frontend & backend box */
+.my-tech-skill-box-layout {
+
+    display: grid;
+    grid: auto auto / 4fr 1.3fr;
+
+    background-color: var(--rainy-dark);
+    color: var(--white);
+
+    padding-left: calc(.1vw + .8em);
+    padding-right: calc(.1vw + .4em);
+
+    padding-top: calc(.1vw + 1.3em);
+    padding-bottom: calc(.1vw + 1.3em);
+
+    margin-bottom: calc(.1vw + 1em);
+
+}
+
+
+/* ---------------------------------------- */
+/*  Skill Status ( % Values ) 
+/* ---------------------------------------- */
+
+
+.skill-status {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    padding: calc(.1vw + .5em);
+    
+    line-height: calc(.1vw + 1.3em);
+   
+    border-left: calc(.1vw + .1em) dotted var(--skin-brown);
+    border-bottom: calc(.1vw + .1em) dotted var(--skin-brown);
+
+    text-align: center;
+    font-weight: bold;
+
+    color: var(--skin-brown);
+    
+}
+
+/* mobile small font size version */
+.skill-status > div {  font-size: calc(.1vw + .8em); }
+
+
+
+
+
+/* ---------------------------------------- */
+/*  Technologie Details ( ul )
+/* ---------------------------------------- */
+
+.ul-skill-details {
+
+    grid-row: 2 / span 2;
+    grid-column: 1 / span 2; 
+
+    margin:0;
+
+    padding-top: calc(.1vw + 1.8em);
+
+    padding-left: calc(.1vw + 1.3em);
+    padding-right: calc(.1vw + 1em);
+
+    font-size: calc(.1vw + .8em);
+    color: var(--light-grey);
+
+    
+
+}
+
+
+
+
+
+/* ---------------------------------------------------------------- */
+/*   4.3 - Article Layout - My Mindset
+/* ---------------------------------------------------------------- */
+
+ 
+#div-my-mindset {
+  
+    row-gap: calc(.1vw + 4em); 
+
+    /* no extra padding because of video in mobile version */
+    margin-top: calc(.1vw + 3em);
+    margin-bottom: calc(.1vw + 3em);
+    
+}
+
+/* Meddia Container - Quote Text & Video  */
+
+.my-mindset-media-container {
+
+    display: grid;
+    row-gap: calc(.1vw + 1.5em); 
+
+}
+
+
+.video-about-me-my-mindset {
+
+    display: block;
+    width: 100%;
+    height: calc(1vw + 13em); 
+
+    border-radius: .5em;
+
+    box-shadow: rgba(209,192,165, 0.95) 0px 5px 15px;
+
+}
+
+/* info: orde-team will be change by responsive handling */
+
+
+
+
+
+/* ---------------------------------------------------------------- */
+/*   4.4 - Article Layout - Contact Me
+/* ---------------------------------------------------------------- */
+ 
+
+#div-contact-me {
+
+    margin-top: calc(.1vw + 4em);
+    margin-bottom: calc(.1vw + 2em);
+
+    /*margin-left: calc(.1vw + .3em);
+    margin-right: calc(.1vw + .3em); */
+   
+}
+
+
+
+
+
+
+/* -------------------------------------------------------- */
+/* 4.4.1 - E-Mail Formular 
+/* -------------------------------------------------------- */
+
+
+
+#form-contact-me {
+
+    position: relative;
+    top:0;
+
+    display: grid;
+    row-gap: calc(.1vw + 1.3em);
+    
+}
+
+
+
+/* -------------------------------------------------------- */
+/* IMG - small , keyframe , big img 
+/* -------------------------------------------------------- */
+
+.img-small-contact-me-box {  
+    
+    display: none; 
+
+   
+
+}
+   
+
+/* keyframe left - righ is set in root */
+.keyframe-padding-lr-i-1s {
+
+    animation: padding-lr-i-1s .6s infinite;
+}
+
+/* big img me as cartoon */
+#img-contact-me {
+
+    display: none;
+    width: calc( 3vw + 5em);
+
+    position: absolute;
+    top: calc(-1.8vw - .3em);
+    right:0;
+
+    
+}
+
+
+/* --------------------------------------------- */
+/* E-Mail , Subject , Text Area - width 
+/* --------------------------------------------- */
+
+.txt-field-email-about-me,
+.txt-field-subject-about-me,
+.txt-area-about-me {
+
+    width: 100%;
+}
+
+
+/* ------------------------------------------- */
+/* Area of Button About Me 
+/* ------------------------------------------- */
+
+.button-area-about-me {
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    column-gap: calc(.1vw + .3em);
+}
+
+
+
+/* ------------------------------------------- */
+/* Button - About Me - Clear Message
+/* ------------------------------------------- */
+    
+.btn-contact-me-clear {
+
+    background-color: var(--light-grey);
+    opacity: .3;
+
+}
+
+.btn-contact-me-clear:hover {
+
+    background-color: var(--skin-brown);
+    opacity: .6;
+
+}
+
+
+
+
+
+
+
+
+

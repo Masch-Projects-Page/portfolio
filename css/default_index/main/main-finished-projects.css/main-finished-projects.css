@@ -1,0 +1,412 @@
+/* ------------------------------------------------------------- */
+/* [CSS-File] - main-finished-projects.css 
+/* ------------------------------------------------------------- */
+/* [Definitions]
+/* 
+/* 1. Label Layout - Project Topics ( open / close )
+        1.1 - Img - Project Topic
+        1.2 - Img Layout - Arrow up / down 
+
+   2. Project Open Layout 
+
+        2.1 - Project Label & Project Img ( img small / img big ) 
+
+        2.2 - Project Img & Circle Number 
+        2.3 - Project Title Area 
+        
+
+   3. ...
+
+/* ------------------------------------------------------------- */
+
+
+
+
+/* ------------------------------------------------------------ */
+/*  1 - Label Layout - Project Topics ( open / close )
+/* ------------------------------------------------------------ */
+
+/* ------------------------------------------- */
+/* Checkboxes of Label 
+/* ------------------------------------------- */
+
+input#chk-finished-projects-webpages ,
+input#chk-finished-projects-webplattforms, 
+input#chk-finished-projects-webapps {
+
+    display:none;  
+} 
+
+
+
+/* ------------------------------------------- */
+/* Checkboxes of Label - Handling
+/* ------------------------------------------- */
+
+input#chk-finished-projects-webpages:checked ~ article label[for="chk-finished-projects-webpages"] > div > img,
+input#chk-finished-projects-webplattforms:checked ~ article label[for="chk-finished-projects-webplattforms"] > div > img ,
+input#chk-finished-projects-webapps:checked ~ article label[for="chk-finished-projects-webapps"] > div > img  {
+
+    transform: rotate(180deg);
+}
+
+input#chk-finished-projects-webpages:checked ~ article #finished-projects-webpages,
+input#chk-finished-projects-webplattforms:checked ~ article #finished-projects-webplattforms,
+input#chk-finished-projects-webapps:checked ~ article #finished-projects-webapps
+{
+    display: grid;
+}
+
+
+
+.label-finished-projects {
+
+    cursor: pointer;
+
+    display: grid;
+
+    /* mobile version */
+    grid: auto / 1fr .25fr;
+    /* desktop - version -> grid: auto / auto 1fr .25fr; */
+
+    align-items: flex-start;
+
+    font-size: calc(.1vw + 1.2em);
+    font-weight: bold;
+
+    border-bottom: calc(.1vw + .1em) solid var(--skin-brown);
+
+
+}
+
+/* ------------------------------------- */
+/* 1.1 - Img - Project Topic
+/* ------------------------------------- */
+
+
+.img-project-title-topic {
+
+    /* mobile version - unshown */
+    display: none;
+    
+    /* desktop version - display: block; */
+    width: calc(.1vw + 10em);
+    height: 100%;
+
+}
+
+
+
+/* ------------------------------------- */
+/* 1.2 - Img Layout - Arrow up / down 
+/* ------------------------------------- */
+
+.img-arrow-up-down-box-finished-projects {
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+
+    border-left: .1vw solid rgba(255, 255, 255, .5);
+    background-color: var(--moon-dark);
+
+    border-radius: 0em .5em .5em 0em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------ */
+/*  2 - Project Open Layout 
+/* ------------------------------------------------------------ */
+
+/* open & close container */
+#finished-projects-webpages,
+#finished-projects-webplattforms,
+#finished-projects-webapps {
+
+    display: none;
+
+}
+
+
+.project-container {
+
+    position: relative;
+    top:0;
+
+    display: grid;
+    align-items: center;
+    column-gap: calc(.1vw + 1.8em);
+    
+
+    /* mobile version */
+    grid: auto / 1fr;
+    /* desktop - version - grid: auto / 1.3fr 4fr; */
+}
+
+.project-block-container { 
+
+    position: absolute;
+    top:0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, .7);
+}
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------- */
+/*  2.1 - Project Label & Project Img ( img small / img big ) 
+/* --------------------------------------------------------------- */
+
+input[id^="chk-f-p-img-label"] { display: none;} 
+
+
+label[for^="chk-f-p"] {
+
+    cursor: pointer;
+}
+
+
+
+/* ------------------------------------------------------------ */
+/* Label Clicked ( checkbox ) - IMG Handling  
+/* ------------------------------------------------------------ */
+
+/* default : input[id^="chk-f-p-img-label"]:checked ~ article label[for^="chk-f-p-img-label"] > div > img */
+/* */
+input[id="chk-f-p-img-label-webpages-project-1"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-1"] > div > img ,
+input[id="chk-f-p-img-label-webpages-project-2"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-2"] > div > img , 
+input[id="chk-f-p-img-label-webpages-project-3"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-3"] > div > img ,
+input[id="chk-f-p-img-label-webpages-project-4"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-4"] > div > img ,
+input[id="chk-f-p-img-label-webpages-project-5"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-5"] > div > img ,
+input[id="chk-f-p-img-label-webpages-project-6"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-6"] > div > img ,
+input[id="chk-f-p-img-label-webpages-project-7"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-7"] > div > img ,
+input[id="chk-f-p-img-label-webpages-project-8"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-8"] > div > img ,
+input[id="chk-f-p-img-label-webpages-project-9"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-9"] > div > img ,
+
+input[id="chk-f-p-img-label-webplattforms-project-1"]:checked ~ article label[for="chk-f-p-img-label-webplattforms-project-1"] > div > img ,
+input[id="chk-f-p-img-label-webplattforms-project-2"]:checked ~ article label[for="chk-f-p-img-label-webplattforms-project-2"] > div > img ,
+input[id="chk-f-p-img-label-webplattforms-project-3"]:checked ~ article label[for="chk-f-p-img-label-webplattforms-project-3"] > div > img ,
+input[id="chk-f-p-img-label-webplattforms-project-4"]:checked ~ article label[for="chk-f-p-img-label-webplattforms-project-4"] > div > img ,
+
+input[id="chk-f-p-img-label-webapps-project-1"]:checked ~ article label[for="chk-f-p-img-label-webapps-project-1"] > div > img ,
+input[id="chk-f-p-img-label-webapps-project-2"]:checked ~ article label[for="chk-f-p-img-label-webapps-project-2"] > div > img ,
+input[id="chk-f-p-img-label-webapps-project-3"]:checked ~ article label[for="chk-f-p-img-label-webapps-project-3"] > div > img 
+{
+
+    position: relative;
+
+    /* bring content in fixed container centered & middle pos */
+    left: 50%;
+    top: 50%;
+
+    /* bring in middle of page */
+    transform: translate( -50%, -50%);
+
+    /* mobile size */
+    min-width: 83vw;
+    max-width: 90vw; 
+
+
+}
+
+/* ------------------------------------------------------- */
+/* Label Clicked ( checkbox ) - Div Handling   
+/* ------------------------------------------------------- */
+
+/* default : input[id^="chk-f-p-img-label"]:checked ~ article label[for^="chk-f-p-img-label"] > div  */
+
+input[id="chk-f-p-img-label-webpages-project-1"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-1"] > div ,
+input[id="chk-f-p-img-label-webpages-project-2"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-2"] > div ,
+input[id="chk-f-p-img-label-webpages-project-3"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-3"] > div ,
+input[id="chk-f-p-img-label-webpages-project-4"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-4"] > div ,
+input[id="chk-f-p-img-label-webpages-project-5"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-5"] > div ,
+input[id="chk-f-p-img-label-webpages-project-6"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-6"] > div ,
+input[id="chk-f-p-img-label-webpages-project-7"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-7"] > div ,
+input[id="chk-f-p-img-label-webpages-project-8"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-8"] > div ,
+input[id="chk-f-p-img-label-webpages-project-9"]:checked ~ article label[for="chk-f-p-img-label-webpages-project-9"] > div ,
+
+input[id="chk-f-p-img-label-webplattforms-project-1"]:checked ~ article label[for="chk-f-p-img-label-webplattforms-project-1"] > div ,
+input[id="chk-f-p-img-label-webplattforms-project-2"]:checked ~ article label[for="chk-f-p-img-label-webplattforms-project-2"] > div ,
+input[id="chk-f-p-img-label-webplattforms-project-3"]:checked ~ article label[for="chk-f-p-img-label-webplattforms-project-3"] > div ,
+input[id="chk-f-p-img-label-webplattforms-project-4"]:checked ~ article label[for="chk-f-p-img-label-webplattforms-project-4"] > div ,
+
+input[id="chk-f-p-img-label-webapps-project-1"]:checked ~ article label[for="chk-f-p-img-label-webapps-project-1"] > div ,
+input[id="chk-f-p-img-label-webapps-project-2"]:checked ~ article label[for="chk-f-p-img-label-webapps-project-2"] > div ,
+input[id="chk-f-p-img-label-webapps-project-3"]:checked ~ article label[for="chk-f-p-img-label-webapps-project-3"] > div 
+{
+
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+ 
+    width: 100%;
+    height: 100%;
+ 
+ 
+    background: rgba(0,0,0, 1);
+    z-index: 99;
+    
+
+}
+
+
+
+
+/* ------------------------------------------------------------ */
+/*  2.2 - Project Img & Circle Number 
+/* ------------------------------------------------------------ */
+
+
+.img-project {
+
+    /* mobile unshown */
+    display: none;
+
+    width: calc(5vw + 6em);
+
+    box-shadow: rgba(209,192,165, 0.95) 0px 5px 15px;
+
+}
+
+.project-info-box {
+
+    display: grid;
+    row-gap: calc(.1vw + 1em);
+}
+
+
+
+.circle-project-area {
+
+   
+    /* mobile unshown */
+    display: none;
+    /*display: flex; -- desktop version */
+
+    align-items: center;
+    justify-content: center;
+
+
+    position: absolute;
+    top:0;
+    left: calc(.1em - 1vw);
+    top: calc(.1em - 1.8vw);
+
+
+
+    width: calc(1vw + 1em);
+    height: calc(1vw + 1em);
+
+
+    background-color: var(--black);
+    border-radius: 50%;
+    border: calc(.1vw + .2em) solid var(--skin-brown);
+    
+}
+
+
+
+
+
+
+/* ------------------------------------------------------ */
+/*  2.3 - Project Title Area 
+/* ------------------------------------------------------ */
+
+
+.tech-text-box { 
+
+    padding-left: calc(.1vw + .3em);
+    padding-right: calc(.1vw + .3em);
+
+    background-color: var(--rainy-dark);
+    font-weight: bold;
+}
+
+
+.tech-info-container,
+.project-link-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    column-gap: calc(.1vw + .5em);
+    row-gap: calc(.1vw + .8em);
+}
+
+
+
+.project-link-container {
+
+    padding-left: calc(.1vw + .3em);
+    justify-content: flex-end;
+}
+
+
+.project-tech-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+
+
+/* ------------------------------------------- */
+/* Link - Button
+/* ------------------------------------------- */
+
+
+.link-github-box, 
+.link-view-box {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: calc(.1vw + .5em);
+
+    text-decoration: none;
+    font-weight: bold;
+
+    width: calc(.1vw + 6em);
+
+    padding: calc(.1vw + .1em);
+
+    color: var(--black);
+    background-color: var(--skin-brown);
+}
+
+.link-github-box:hover, 
+.link-view-box:hover {
+
+    transition: .3s;
+    background-color: var(--light-grey);
+} 
+
+
+
+
+

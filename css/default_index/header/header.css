@@ -1,0 +1,281 @@
+/* ------------------------------------------------------------- */
+/* [CSS-File] - header.css 
+/* ------------------------------------------------------------- */
+/* [Definitions]
+/* 
+/* 1. header portfolio container
+
+/* 2. header portfolio top area
+        2.1 - Home Link Area 
+
+        2.2 - header - imgs area
+        2.3 - header - title area
+        2.4 - header - js matrix 
+        2.5 - header - underline 
+
+        2.6 - header - anker navigation
+        2.7 - header scroll behaviour 
+/* ------------------------------------------------------------- */
+
+
+
+
+/* --------------------------------------------------------------------- */
+/* 1. header portfolio container 
+/* --------------------------------------------------------------------- */
+
+
+#header-portfolio-container {
+
+    /* in some sizes get minimal line transparent so need color */
+    background-color: var(--black);
+
+    display: grid;
+
+    z-index: 99;
+
+    position: fixed;
+    top:0;
+    right: 0;
+    left:0;
+   
+    /* individuell smaller */
+    font-size: calc(.1vw + .8em);
+}
+
+
+
+
+
+/* --------------------------------------------------------------------- */
+/* 2. header portfolio top area 
+/* --------------------------------------------------------------------- */
+
+#header-portfolio-top-area {
+
+    height: calc(.1vw + 2.5em);
+
+    background-color: var(--black);
+
+    padding-left: calc(.1vw + .5em);
+    padding-right: calc(.1vw + .5em);
+
+    display: flex;
+    align-items: center;
+    column-gap: calc(.1vw + .3em);
+}
+
+
+
+/* ------------------------------------  */
+/* 2.1 - Home Link Area                  */
+/* ------------------------------------  */
+
+#header-logo-link {
+
+    text-decoration: none;
+    color:var(--white);
+    padding: calc(.1vw + .3em); 
+}
+
+#header-logo-link:visited { color:var(--white);  }
+
+#header-logo-link:hover {
+
+    transition: .3s;
+    background-color: var(--rainy-dark);
+    border-radius: .5em ;
+    
+
+}
+
+
+/* ------------------------------------------ */ 
+/* 2.2 - header - imgs area
+/* ------------------------------------------ */ 
+
+#header-portfolio-img-area {
+
+    position: relative;
+    top:0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-portfolio-img-area > img:nth-of-type(1) {
+
+    width: calc(.1vw + 1.5em);
+
+}
+
+#header-portfolio-img-area > img:nth-of-type(2) {
+
+    position: absolute;
+    top: calc(.1vw + 1em);
+    right: calc(.1vw - .7em);
+
+    width: calc(.1vw + .8em);
+
+}
+
+
+
+/* ------------------------------------------ */ 
+/* 2.3 - header - title area
+/* ------------------------------------------ */ 
+
+#header-portfolio-title-area {
+
+    display: flex;
+    align-items: center;
+    column-gap: calc(.1vw + .8em);
+}
+
+/* only color for mobile */
+#header-portfolio-title { color: var(--dark-grey); }
+
+    
+
+
+#header-portfolio-title-area > div:nth-of-type(2) {
+
+    font-size: calc(.1vw + .8em);
+}
+
+
+
+
+
+/* ------------------------------------------ */ 
+/* 2.4 - header - js matrix
+/* ------------------------------------------ */ 
+
+#header-portfolio-js-matrix {
+
+    /* display:flex; */
+    display: none;
+    column-gap: calc(.1vw + .8em);
+
+    font-size: calc(.1vw + .8em);
+    
+    font-weight: bold;
+    color: var(--dark-grey);
+}
+
+
+
+
+
+
+/* ------------------------------------------ */ 
+/* 2.5 - header - underline 
+/* ------------------------------------------ */ 
+
+#header-portfolio-underline-area-1, 
+#header-portfolio-underline-area-2 {
+
+    height: calc(.1vw + .1em);
+    background-color: var(--skin-brown);
+}
+
+
+
+
+
+/* ------------------------------------------ */ 
+/* 2.6 - header - anker navigation 
+/* ------------------------------------------ */ 
+
+#header-portfolio-nav {
+
+    height: calc(.1vw + 3.3em);
+    background-color: var(--black);
+
+
+    /* padding */
+    
+    display: grid;
+    grid: auto / 1.3fr 1.3fr 1fr 1fr;
+    column-gap: calc(.1vw + .3em);
+    align-items: center;
+  
+    z-index: 11;
+
+    font-weight: bold;
+   
+}
+
+
+/* ------------------------------------- */
+/* default anker nav item                */
+/* ------------------------------------- */
+
+#header-portfolio-nav > a {
+
+    position: relative;
+    top:0;
+
+    height: 100%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: calc(.1vw + .8em);
+
+    
+    text-decoration: none; 
+    
+}
+
+/* mobile anker links color */
+#header-portfolio-nav > a > div { color:var(--light-grey);}
+
+
+#header-portfolio-nav a:visited { color: var(--white); }
+
+/* default mobile first - unshown img anker header */
+#header-portfolio-nav > a > img:nth-of-type(1),
+#header-portfolio-nav > a > img:nth-of-type(2) { display: none; }
+
+
+#header-portfolio-nav > a:hover,
+#header-portfolio-nav > a:active,
+#header-portfolio-nav > a.active   {
+
+    transition: .3s;
+    background-color: var(--skin-brown); 
+   
+}
+
+
+#header-portfolio-nav > a:hover > div ,
+#header-portfolio-nav > a:active > div ,
+#header-portfolio-nav > a.active > div   {  color:var(--black); }
+
+/* only anker link about us , because of contact me */
+#header-portfolio-nav > a:hover > div #header-contact-me , 
+#header-portfolio-nav > a:active > div #header-contact-me  , 
+#header-portfolio-nav > a.active  > div #header-contact-me {  color: var(--dark-grey); }
+
+
+
+/* mobile arrow right */
+.mobile-arrow-right {
+
+    position: absolute;
+    right: -.5em;
+    z-index: 11;
+}
+
+
+/* ------------------------------------------ */ 
+/* 2.7 - header - anker navigation 
+/* ------------------------------------------ */ 
+
+/* only if js is not active */
+#finishedprojects, #todos, #more {
+
+    scroll-margin-top: calc(.1vw + 5em);
+}

@@ -1,0 +1,156 @@
+/* ------------------------------------------------------------- */
+/* [CSS-File] - footer.css 
+/* ------------------------------------------------------------- */
+/* [Definitions]
+/* 
+/* 1. footer portfolio
+        1.1 footer portfolio section 
+        1.2 h1 & compass
+        1.3 container - content links ( article )
+            1.3.1 link style & hover
+            1.3.2 social-subinks-area
+            1.3.3 teaching-subinks-area
+        1.4 Copyright Masch Projcts
+
+/* ------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------- */
+/* 1. footer portfolio
+/* ---------------------------------------------------------- */
+
+#footer-portfolio {
+
+    background-color: var(--black);
+    color:var(--white);
+    border-top: calc( .1vw + .5em ) solid var(--skin-brown);
+
+}
+
+
+
+/* ---------------------------------------------- */
+/*  1.1 - footer portfolio section 
+/* ---------------------------------------------- */
+
+#footer-portfolio > section {
+
+    position: relative;
+    top:0;
+
+    padding-top: calc(.1vw + 1.5em);
+    padding-bottom: calc(.1vw + 1.5em);
+
+    padding-left: calc(.1vw + 1.3em);
+    padding-right: calc(.1vw + 1.3em);
+   
+}
+
+/* ----------------------------------------------- */
+/* 1.2 - h1 & compass
+/* ----------------------------------------------- */
+
+#h1-footer-portfolio { 
+    
+    margin:0; 
+    padding-bottom: calc(.1vw + 2.3em);
+}
+
+#img-footer-compass {
+
+    position: absolute;
+    top: calc(.1vw + .8em);
+    right:calc(.1vw + .8em);
+    width: calc(.1vw + 2.5em); 
+    /*transform: rotate(35deg);*/
+}
+
+
+
+/* ----------------------------------------------- */
+/* 1.3 - container - content links (article)
+/* ----------------------------------------------- */
+
+
+#footer-contentlinks-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: calc(.1vw + 2.5em );
+    column-gap: calc(.1vw + 2em ); 
+
+}  
+
+/* ----------------------------------------------- */
+/*  1.3.1 link style & hover
+/* ----------------------------------------------- */
+
+
+#footer-portfolio a { 
+
+    padding: calc(.1vw + .3em);
+    text-decoration: none;
+    color: var(--white);
+}
+
+#footer-portfolio a:visited { 
+
+    color:var(--white);
+
+}
+
+#footer-portfolio a:hover {
+
+    transition: .3s;
+    background-color: var(--dark-grey);
+}
+
+
+
+
+/* ----------------------------------------------- */
+/*  1.3.2 - social-subinks-area
+/* ----------------------------------------------- */
+
+.footer-portfolio-sublinks-area {
+
+    display: grid;
+    row-gap: calc(.1vw + .3em);
+
+    padding-top: calc(.1vw + 1.3em);
+    padding-left: calc(.1vw + .2em);
+}
+
+/* ----------------------------------------------- */
+/*  1.3.3 - teaching-sublinks-area
+/* ----------------------------------------------- */
+
+#footer-portfolio-cool-teaching-websites-sublinks-area {
+
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    column-gap: calc(.1vw + 1.5em); 
+}
+
+
+
+
+
+/* ----------------------------------------------- */
+/*  1.4 Copyright Masch Projcts
+/* ----------------------------------------------- */
+
+#footer-copy-right-area {
+
+    /* rgba  R:209, G:192, B:165 */
+    border-top: calc(.1vw + .1em ) solid rgba(209, 192, 165, .6);
+
+    padding-top: calc(.1vw + 1em);
+    padding-bottom: calc(.1vw + 1.3em);
+    padding-right: calc(.1vw + 1.5em);
+}
+
+
+
