@@ -1,0 +1,113 @@
+/* ------------------------------------------------------------- */
+/* [CSS-File] - root-body.css 
+/* ------------------------------------------------------------- */
+/* [Definitions]
+/* 
+  1. Default colors 
+      1.1 - Light Colors
+      1.2 - Dark Colors 
+
+  2. Default html , body , main , footer style 
+      * responsive font-size
+      * font-family
+      * margin 0 , overflox-x , width , height
+      * line height 
+/* ------------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------*/
+/* 1 - Default colors 
+/* ----------------------------------------------------------*/
+
+:root { 
+
+/* ---------------------------------- */
+/*  1.1 - Light Colors                */
+/* ---------------------------------- */
+
+    /* light grey & light brown */
+    --light-grey: #d3d3d3;
+    --skin-brown: #d1c0a5;
+    --light-skin-brown: #D9BF98;
+    
+    /* light blue */
+    --css-blue: #2dceff;
+    --lightblue: lightblue;
+
+    /* light red */
+    --light-red: #F94D4D ;
+    --light-red-2: #FF0000;
+    --light-red-3: #F5A9A9;
+
+    /* light yellow */
+    --light-yellow: #F7FE2E;
+
+    /* light green */
+    --light-green: #01DF01;
+
+    /* white */
+    --white:white;
+
+
+
+/* ---------------------------------- */
+/*  1.2 - Dark Colors                 */
+/* ---------------------------------- */
+
+  /* black & grey */
+  --black: black;
+  --moon-dark: #212121;
+  --rainy-dark: #424242;
+  --dark-grey: #616161;
+  --dark-grey-2: #424242;
+
+  /* dark red */
+  --dark-red: #B40404;
+
+
+  /* brown */
+  --dark-brown: #6b5441;
+  --dark-light-brown: #61380B;
+
+}
+
+
+
+/* ----------------------------------------------------------*/
+/* 1 - Default html , body , main , footer style 
+/* ----------------------------------------------------------*/
+
+
+
+html {
+
+  /* every anker jump get smooth slide effect */
+  scroll-behavior: smooth;
+}
+
+body {
+
+    /* delete default margin of webpage of 8px */
+    margin:0;
+    /* x scrollbar unshown */
+    overflow-x: hidden; 
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    /* 1rem is default 16px, u can use 1em too */
+    /* 1rem is fixed and 1em is realtive */
+    font-size: calc( .3vw + 1rem);
+  
+}
+
+main {
+
+  line-height: calc(.1vw + 1.8em );
+
+}
+
+footer {
+
+  line-height: 1.5em;
+}
+
