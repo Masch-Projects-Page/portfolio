@@ -1,0 +1,300 @@
+/* ------------------------------------------------------------- */
+/* [CSS-File] - resp-main-about-us.css 
+/* ------------------------------------------------------------- */
+/* [Definitions]
+/* 
+   1. width >= 520px 
+   2. width >=  690px 
+
+   3. width >= 919px 
+   4. width >= 580px - 919px  
+
+   5. width >= 920px  
+
+/* ------------------------------------------------------------- */
+
+
+
+/* --------------------------------------------- */
+/* 1. width >= 430px 
+/* --------------------------------------------- */
+@media (min-width: 430px ) {
+
+    /* -------------------------------------------- */
+    /* My Tech Skills 
+    /* -------------------------------------------- */
+
+    /* small tech imgs */
+    .img-my-tech-skills {
+
+        width: calc(.1vw + 1.5em);
+    }
+
+  
+
+}
+
+
+@media (min-width: 430px ) and (max-width: 579px ) {
+
+
+    /* -------------------------------------------- */
+    /* My Tech Skills 
+    /* -------------------------------------------- */
+
+    /* tech card more inside */
+    #my-tech-skills-frontend-layout > div { 
+
+        margin-left: calc(.1vw + 2.5em);
+        margin-right: calc(.1vw + 2.5em); 
+    }
+
+}
+
+
+/* -------------------------------------------- */
+/* 1. width >= 580px 
+/* -------------------------------------------- */
+
+@media (min-width: 580px ) and (max-width: 689px ) {
+
+
+    /* ------------------------------------------------------ */ 
+    /* Tech Skills
+    /* ------------------------------------------------------ */ 
+    
+    /* tech card more inside */
+    #my-tech-skills-frontend-layout > div { 
+
+        margin-left: calc(.1vw + 4em);
+        margin-right: calc(.1vw + 4em); 
+    }
+
+
+}
+
+
+/* -------------------------------------------- */
+/* 2. width >=  690px 
+/* -------------------------------------------- */
+@media (min-width: 690px ) {
+
+
+    /* ------------------------------------------------------ */ 
+    /* Title Area of About Me 
+    /* ------------------------------------------------------ */ 
+
+    #img-about-me {  width: calc( 8vw + 10em); }
+
+}
+
+
+
+@media (min-width: 690px ) and (max-width: 759px ) {
+
+    /* ------------------------------------------------------ */ 
+    /* Tech Skills
+    /* ------------------------------------------------------ */ 
+    
+    /* tech card more inside */
+    #my-tech-skills-frontend-layout > div { 
+
+        margin-left: calc(.1vw + 6em);
+        margin-right: calc(.1vw + 6em); 
+    }
+}
+
+
+
+
+/* -------------------------------------------- */
+/* 3. width >= 919px   
+/* -------------------------------------------- */
+
+@media ( max-width: 759px ) { 
+
+
+    /* ------------------------------------------------------ */ 
+    /* Tech Skills
+    /* ------------------------------------------------------ */ 
+
+    /* if frontend is checked */
+    input#radio-about-me-frontend:checked ~ #div-my-tech-skills > #my-tech-skills-frontend-layout { display: grid;}
+    input#radio-about-me-frontend:checked ~ #div-my-tech-skills > #my-tech-skills-backend-layout { display: none;}
+
+    /* if backend is checked */
+    input#radio-about-me-backend:checked ~ #div-my-tech-skills > #my-tech-skills-backend-layout { display: grid;}
+    input#radio-about-me-backend:checked ~ #div-my-tech-skills > #my-tech-skills-frontend-layout { display: none;} 
+
+}
+
+
+
+
+/* -------------------------------------------- */
+/* 4. width >= 580px - 760px  
+/* -------------------------------------------- */
+
+@media (min-width: 580px ) and ( max-width: 760px ) {
+
+
+    /* ------------------------------------------------------ */ 
+    /* Tech Skills
+    /* ------------------------------------------------------ */ 
+
+
+
+
+    /* ------------------------------------------------------ */ 
+    /* My Mindset
+    /* ------------------------------------------------------ */ 
+
+    #div-my-mindset {
+
+        margin-left: calc(5vw + .5em);
+        margin-right: calc(5vw + .5em);
+    }
+
+    /* ------------------------------------------------------ */ 
+    /* Contact Me
+    /* ------------------------------------------------------ */ 
+
+    #form-contact-me {
+
+        margin-left: calc(.1vw + 1em);
+        margin-right: calc(.1vw + 1em);
+    }
+
+    .txt-field-email-about-me { width: 55%; }
+
+}
+
+
+
+/* -------------------------------------------- */
+/* 5. width >= 920px 
+/* -------------------------------------------- */
+
+@media (min-width: 760px ) {
+
+
+    /* ------------------------------------------------------ */ 
+    /* Title Area of About Me 
+    /* ------------------------------------------------------ */ 
+
+    #img-about-me {  width: calc( 8vw + 9.6em); }
+
+
+    /* ------------------------------------------------------ */ 
+    /* Default Main Pos ( more inside )
+    /* ------------------------------------------------------ */ 
+
+    .main-portfolio-content-box {
+
+        margin-left: calc(.1vw + 1.5em);
+        margin-right: calc(.1vw + 1.5em);
+        
+    }
+    
+
+    /* ------------------------------------------------------ */ 
+    /* Why I call it Masch ?
+    /* ------------------------------------------------------ */ 
+
+    #img-why-masch { display: block; }
+
+
+    /* ------------------------------------------------------ */ 
+    /* Tech Skills
+    /* ------------------------------------------------------ */ 
+
+
+    /* small tech imgs */
+    .img-my-tech-skills {
+
+        width: calc(.1vw + 1.7em);
+    }
+
+    #radio-my-tech-skills-panel { display: none;}
+
+
+    #div-my-tech-skills { 
+        
+        grid: auto / 1fr 1fr;
+
+        margin-top: calc(.1vw + 1.3em);
+        
+    }
+
+
+    #my-tech-skills-frontend-layout , 
+    #my-tech-skills-backend-layout {
+
+        display: grid;
+        row-gap: calc(.1vw + 1.3em);
+    }
+
+
+    /* ------------------------------------------------------ */ 
+    /* My Mindset
+    /* ------------------------------------------------------ */
+    
+    #div-my-mindset {
+
+        margin-top: calc(.1vw + 6em);
+        margin-bottom: calc(.1vw + 4em);
+
+        margin-left: calc(.1vw + 1em);
+        margin-right: calc(.1vw + 1em);
+    }
+
+    .my-mindset-media-container {
+
+        grid: auto / 1fr 1fr;
+        column-gap: calc(.1vw + 1.5em); 
+    }
+
+    .video-about-me-my-mindset {
+
+        height: calc(1vw + 15em); 
+    }
+
+    #order-team { order:1; }
+
+
+    /* ------------------------------------------------------ */ 
+    /* Contact Me
+    /* ------------------------------------------------------ */ 
+
+    #img-contact-me,
+    .img-small-contact-me-box { display: block;   }
+        
+        
+
+    #form-contact-me {
+
+        padding-top: calc(.1vw + .8em );
+
+        margin-left: calc(3vw + 2.5em);
+        margin-right: calc(3.5vw + 3.5em);
+    }
+
+    .txt-field-email-about-me { width: 55%; }
+
+
+}
+
+
+
+@media ( min-width: 1024px) and ( max-width: 1120px ) {
+
+    /* ----------------------------------------------- */ 
+    /* My Tech Skills 
+    /* ----------------------------------------------- */ 
+
+    #div-my-tech-skills { 
+
+        padding-left: calc(.1vw + 5em);
+        padding-right: calc(.1vw + 5em);
+    }
+}
