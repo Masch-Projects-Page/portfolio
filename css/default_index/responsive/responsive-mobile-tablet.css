@@ -1,0 +1,134 @@
+/* ------------------------------------------------------------- */
+/* [CSS-File] - responsive-mobile-tablet.css 
+/* ------------------------------------------------------------- */
+/* [Definitions]
+/* 
+/* 1. width >= 480px 
+/* 2. width >= 680px 
+/* 3. width >= 760px 
+/* 4. width >= 920px 
+
+/* ------------------------------------------------------------- */
+
+
+/* -------------------------------------------- */
+/* 1. width >= 480px 
+/* -------------------------------------------- */
+
+@media (max-width: 480px ) {
+
+    /* ----------------------------- */
+    /* Footer    */
+    /* ----------------------------- */
+
+    .footer-youtube-link-layout {
+
+        display: grid;
+        
+
+    }
+
+}
+
+
+
+/* -------------------------------------------- */
+/* 2. width >= 680px
+/* -------------------------------------------- */
+
+@media (min-width: 680px ) {
+
+
+    /* ----------------------------- */
+    /* IMG - Header Anker Nav */
+    /* ----------------------------- */
+
+    /* show first default img */
+    #header-portfolio-nav > a > img:nth-of-type(1) {  display: block; } 
+
+    /* if hover & active , unshown first, show 2nd */
+    #header-portfolio-nav > a:hover > img:nth-of-type(1),
+    #header-portfolio-nav > a.active > img:nth-of-type(1) { display: none;} 
+
+    #header-portfolio-nav > a:hover > img:nth-of-type(2),
+    #header-portfolio-nav > a.active > img:nth-of-type(2)  { display: block;} 
+        
+
+       
+    /* ---------------------------------- */
+    /* Footer Compass                     */
+    /* ---------------------------------- */
+
+    #img-footer-compass {
+
+        width: calc(.1vw + 3.8em);
+        top: calc(.1vw + 1.3em);
+        right:calc(.1vw + 1.8em);
+        
+    }
+   
+
+   
+
+
+} 
+
+/* -------------------------------------------- */
+/* 3. width >= 760px 
+/* -------------------------------------------- */
+
+
+@media (min-width: 760px ) {
+
+
+    /* ----------------------------- */
+    /* Main Section
+    /* ----------------------------- */
+
+    #main-portfolio-container > div > section { 
+
+        padding-left: 1.5vw;
+        padding-right: 1.5vw;
+
+    }
+
+    /* Date Ticker */
+    #date-ticker { margin:0em; }
+
+    
+
+} 
+
+
+
+/* -------------------------------------------- */
+/* 4. width >= 920px 
+/* -------------------------------------------- */
+
+
+@media (min-width: 920px ) {
+
+
+    /* ----------------------------- */
+    /* IMG - Header Anker Nav */
+    /* ----------------------------- */
+
+    /* anker items in one line */
+    #anker-nav-finishedprojects,  #anker-nav-todos { display: flex; column-gap: calc(.1vw + .4em);}
+
+
+    /* ----------------------------- */
+    /* Main - H1 Margin              */
+    /* ----------------------------- */
+
+    /* h1 curved section position */
+    #h1-p-s-aboutme,
+    #h1-p-s-todos { margin-left: calc(.1vw + 1em); }
+
+    
+    #h1-p-s-finished-projects,
+    #h1-p-s-more { margin-right: calc(.1vw + 1em); }
+
+   
+
+} 
