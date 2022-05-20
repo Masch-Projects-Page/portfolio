@@ -269,6 +269,14 @@ input#radio-more-motivation-lyric-videos:checked ~ div > div.more-arrow-up-keyfr
 /* 1.3 - More Header Keyframe Animation 
 /* -------------------------------------------------------- */
 
+/* actually doing circle */
+.anim-360 {
+
+    display: inline-block;
+
+    animation: anim360 .3s infinite;
+}
+
 
 .more-arrow-up-keyframe-panel-docu,
 .more-arrow-up-keyframe-panel-motivation {
